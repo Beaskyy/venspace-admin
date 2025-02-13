@@ -4,39 +4,34 @@ export const links = [
   {
     name: "Dashboard",
     href: "/",
-    icon: "/dashboard.svg",
-    icon2: "/home.svg",
+    icon: "/home.svg",
+    icon2: "/home-2.svg",
   },
   {
-    name: "Packages",
-    href: "/packages",
-    icon: "/bag-2.svg",
-    icon2: "/bag.svg",
+    name: "Listings",
+    href: "/listings",
+    icon: "/location.svg",
+    icon2: "/location-2.svg",
   },
   {
-    name: "Wallet",
-    href: "/wallet",
-    icon: "/card.svg",
-    icon2: "/card2.svg",
+    name: "Bookings",
+    href: "/bookings",
+    icon: "/bookings.svg",
+    icon2: "/bookings-2.svg",
   },
   {
-    name: "License",
-    href: "/license",
-    icon: "/receipt.svg",
-    icon2: "/receipt2.svg",
+    name: "Earnings",
+    href: "/earnings",
+    icon: "/earnings.svg",
+    icon2: "/earnings-2.svg",
   },
   {
-    name: "Riders",
-    href: "/riders",
-    icon: "/color-swatch.svg",
-    icon2: "/swatch.svg",
+    name: "Memberships",
+    href: "/Memberships",
+    icon: "/medal-star.svg",
+    icon2: "/medal-star-2.svg",
   },
-  {
-    name: "Vehicles",
-    href: "/vehicles",
-    icon: "/car.svg",
-    icon2: "/car2.svg",
-  },
+  
 ];
 
 export const paymentHistory = [

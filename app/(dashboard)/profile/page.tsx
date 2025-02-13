@@ -1,12 +1,6 @@
-"use client"
+"use client";
 
-import { Icons } from "@/components/icons";
-import { Keys } from "@/components/keys";
-import { Logout } from "@/components/logout";
 import { ProfileDetails } from "@/components/profile-details";
-import { Security } from "@/components/security";
-import { Webhook } from "@/components/webhook";
-
 
 const Profile = () => {
   const user = JSON.parse(localStorage.getItem("user") || "{}");
@@ -29,26 +23,9 @@ const Profile = () => {
                 {user?.courier?.name}
               </p>
               <p className="md:text-sm text-xs text-white font-normal leading-[17.1px]">
-              {user?.courier?.email}
+                {user?.courier?.email}
               </p>
             </div>
-            <div className="h-7 bg-white rounded-[32px] py-1.5 px-2.5 flex items-center">
-              <div className="flex items-center gap-1">
-                <Icons.BadgeCheck className="size-4" />
-                <p className="text-xs text-[#4F7A64] font-semibold">
-                  International
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="py-4 px-[14px] bg-white rounded-xl">
-          <div className="flex flex-col gap-8">
-            <ProfileDetails />
-            <Security />
-            <Keys />
-            <Webhook />
-            <Logout />
           </div>
         </div>
       </div>

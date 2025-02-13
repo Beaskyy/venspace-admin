@@ -43,7 +43,7 @@ export const Header = () => {
     }
   };
   return (
-    <div className="px-9 h-20 border-b border-[#F5F5F5] bg-white">
+    <div className="px-9 h-20 border-b border-[#1A1A1A14] bg-white">
       <div className="py-3">
         <div className="flex justify-end items-center">
           <div className="md:flex hidden items-center gap-3">
