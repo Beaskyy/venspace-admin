@@ -10,8 +10,8 @@ export const Sidebar = () => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
   return (
-    <div className="w-[256px] bg-white border-r h-screen fixed flex flex-col py-6 px-4">
-      <div className="py-2">
+    <div className="w-[256px] bg-white border-r border-[#1A1A1A14] h-screen fixed flex flex-col p-6">
+      <div className="pb-2">
           <Link href="/profile" className="relative flex gap-3 items-center md:w-12 md:h-12 w-6 h-6">
             <Image
               src="/logo.svg"
@@ -29,7 +29,7 @@ export const Sidebar = () => {
             onMouseEnter={() => setHoveredLink(link.name)} // Set hover state
             onMouseLeave={() => setHoveredLink(null)} // Clear hover state
             className={cn(
-              `flex items-center gap-3 py-3 px-4 text-[#434242CC] hover:text-[#F44363] hover:bg-[#FFEBEE] text-sm font-medium rounded cursor-pointer`,
+              `flex items-center gap-3 py-2.5 px-3 h-[41px] text-[#434242CC] hover:text-[#F44363] hover:bg-[#FFEBEE] text-sm font-medium rounded-lg cursor-pointer`,
               pathname === link.href && "bg-[#FFEBEE] text-[#F44363]"
             )}
           >

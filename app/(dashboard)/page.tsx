@@ -4,6 +4,7 @@ import { DataTable } from "@/components/data-table";
 import { columns } from "./components/columns";
 import { riders } from "@/lib/data";
 import { useState } from "react";
+import { Overview } from "@/components/overview";
 
 export default function Home() {
   const user = JSON.parse(localStorage.getItem("user") || "{}");
@@ -12,10 +13,11 @@ export default function Home() {
     <main>
       <div className="flex flex-col gap-[22px] md:p-9 p-5 bg-[#F5F5F5]">
         <div className="flex flex-col gap-1">
-          <h3 className="text-[22px] text-[#00081E] font-semibold leading-[26.4px]">
+          <h3 className="md:text-[22px] text-lg text-[#001224] font-bold leading-[29.1px]">
             Welcome back, Loren 👋
           </h3>
         </div>
+        <Overview />
         <DataTable
           columns={columns}
           data={riders}
