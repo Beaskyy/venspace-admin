@@ -47,11 +47,16 @@ export const Header = () => {
       <div className="py-3">
         <div className="flex justify-end items-center">
           <div className="md:flex hidden items-center gap-3">
-              <Bell className="size-[18px]" />
+            <Bell className="size-[18px]" />
 
             <DropdownMenu>
               <DropdownMenuTrigger className="flex justify-center items-center w-[60px] h-[52px] py-2 px-3">
-                <Image src="/profile.png" alt="profile" width={36} height={36} />
+                <Image
+                  src="/profile.png"
+                  alt="profile"
+                  width={36}
+                  height={36}
+                />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
@@ -65,10 +70,11 @@ export const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <div className="md:hidden flex">
+        </div>
+          <div className="md:hidden flex justify-between items-center">
+            <Image src="/logo.svg" alt="logo" width={48} height={48} />
             <Navigation />
           </div>
-        </div>
       </div>
     </div>
   );
