@@ -47,6 +47,7 @@ export const Sidebar = () => {
           </Link>
         ))}
       </nav>
+      <div className="h-0.5 bg-[#1A1A1A14] mt-6"></div>
     </div>
   );
 };

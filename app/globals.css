@@ -83,7 +83,7 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground bg-[#f5f5f5];
+    @apply text-foreground bg-[#ffffff];
   }
   .top-right-dialog {
     position: fixed;

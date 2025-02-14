@@ -1,9 +1,6 @@
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { links } from "@/lib/data";
@@ -11,9 +8,11 @@ import { cn } from "@/lib/utils";
 import { AlignJustify } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export const Navigation = () => {
+  const pathname = usePathname()
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [activeLink, setActiveLink] = useState<string>("");
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
@@ -28,7 +27,7 @@ export const Navigation = () => {
         <SheetTrigger>
           <AlignJustify className="size-6" />
         </SheetTrigger>
-        <SheetContent side="left" className="bg-[#001B0D]">
+        <SheetContent side="left" className="bg-white">
           <nav className="flex flex-col gap-5 mt-14 lg:overflow-hidden overflow-auto lg:hover:overflow-auto">
             {links?.map((link) => (
               <Link
@@ -38,13 +37,13 @@ export const Navigation = () => {
                 onMouseEnter={() => setHoveredLink(link.name)} // Set hover state
                 onMouseLeave={() => setHoveredLink(null)} // Clear hover state
                 className={cn(
-                  `flex items-center gap-3 py-3 px-4 text-white hover:text-[#001B0D] hover:bg-[#F5F5F7] rounded cursor-pointer`,
-                  activeLink === link.name && "bg-[#F5F5F7] text-[#001B0D]"
+                  `flex items-center gap-3 py-3 px-4 text-[#434242CC] hover:text-[#F44363] hover:bg-[#F5F5F7] rounded cursor-pointer`,
+                  activeLink === link.name && "bg-[#FFEBEE] text-[#F44363]"
                 )}
               >
                 <Image
                   src={
-                    hoveredLink === link.name || activeLink === link.name
+                    hoveredLink === link.name || pathname === link.href
                       ? link.icon2
                       : link.icon
                   }
