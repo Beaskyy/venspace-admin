@@ -72,7 +72,7 @@ const ResetPassword = () => {
   return (
     <div className="min-h-screen">
       <div className="p-8">
-        <Image src="/logo.png" alt="Logo" width={119} height={31} />
+        <Image src="/logo.svg" alt="Logo" width={64} height={64} />
       </div>
       <div className="mt-[90px] flex flex-col justify-center items-center gap-[22px] lg:px-0 px-4">
         <div className="flex flex-col gap-1">
