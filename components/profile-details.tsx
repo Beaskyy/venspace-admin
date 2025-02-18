@@ -23,7 +23,10 @@ export const ProfileDetails = () => {
   const user = JSON.parse(localStorage.getItem("user") || "{}");
 
   const { data, error, isLoading } = useSWR(
-    [`${process.env.NEXT_PUBLIC_API_URL}/couriers/${user?.courier?.uuid}`, token],
+    [
+      `${process.env.NEXT_PUBLIC_API_URL}/couriers/${user?.courier?.uuid}`,
+      token,
+    ],
     ([url, token]) => fetcher(url, token)
   );
 
@@ -72,7 +75,7 @@ export const ProfileDetails = () => {
           </DialogTitle>
           <DialogDescription>
             <div className="flex flex-col gap-4">
-              <p className="text-base text-[#00A54F] font-medium">
+              <p className="text-base text-[#F44363] font-medium">
                 Company details
               </p>
               <div className="grid grid-cols-2 gap-5">
@@ -110,7 +113,7 @@ export const ProfileDetails = () => {
                 </div>
               </div>
               <div>
-                <p className="text-base text-[#00A54F] font-medium">
+                <p className="text-base text-[#F44363] font-medium">
                   Contact person’s details
                 </p>
                 <div className="grid grid-cols-2 gap-5">

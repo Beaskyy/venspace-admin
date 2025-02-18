@@ -162,7 +162,7 @@ const SignUp = () => {
 
   const handleSubmit = async (e: React.FormEvent<any>) => {
     e.preventDefault();
-    
+
     if (currentPage < 3) {
       setCurrentPage(currentPage + 1);
       return;
@@ -205,8 +205,8 @@ const SignUp = () => {
 
       const data = await response.json();
       if (data.status === "error") throw new Error(data.message);
-      
-      toast.success(data.message)
+
+      toast.success(data.message);
 
       window.location.href = "/";
     } catch (error: any) {
@@ -220,7 +220,7 @@ const SignUp = () => {
     <div className="grid md:grid-cols-2 grid-cols-1 bg-white">
       <div className="overflow-y-auto">
         <div className="p-8">
-          <Image src="/logo.png" alt="Logo" width={119} height={31} />
+          <Image src="/logo.svg" alt="Logo" width={64} height={64} />
         </div>
         <div className="mt-[50px] flex justify-center items-center flex-col gap-8">
           <div className="flex flex-col gap-2.5">
@@ -460,7 +460,7 @@ const SignUp = () => {
           </div>
           <div className="flex gap-1 pb-10">
             <p className="text-sm text-[#667085]">Already have an account?</p>
-            <Link className="text-sm text-[#00A54F] leading-5" href="/login">
+            <Link className="text-sm text-[#F44363] leading-5" href="/login">
               Log in
             </Link>
           </div>

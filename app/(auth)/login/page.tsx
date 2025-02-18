@@ -95,7 +95,7 @@ const Login = () => {
     <div className="grid md:grid-cols-2 grid-cols-1 bg-white">
       <div className="overflow-y-auto">
         <div className="p-8">
-          <Image src="/logo.png" alt="Logo" width={119} height={31} />
+          <Image src="/logo.svg" alt="Logo" width={64} height={64} />
         </div>
         <div className="mt-[50px] flex justify-center items-center flex-col gap-8">
           <div className="flex flex-col gap-2.5">
@@ -156,7 +156,7 @@ const Login = () => {
                     Forgot password?{" "}
                     <Link
                       href="/reset-password"
-                      className="text-[#00A54F] font-semibold"
+                      className="text-[#F44363] font-semibold"
                     >
                       Reset password
                     </Link>
@@ -175,7 +175,7 @@ const Login = () => {
           </div>
           <div className="flex gap-1 pb-8">
             <p className="text-sm text-[#667085]">Already have an account?</p>
-            <Link className="text-sm text-[#00A54F] leading-5" href="/signup">
+            <Link className="text-sm text-[#F44363] leading-5" href="/signup">
               Sign up
             </Link>
           </div>
