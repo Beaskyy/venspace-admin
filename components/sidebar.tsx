@@ -21,7 +21,7 @@ export const Sidebar = () => {
             />
           </Link>
       </div>
-      <nav className="flex flex-col gap-2 mt-4 lg:overflow-hidden overflow-auto lg:hover:overflow-auto">
+      <nav className="flex flex-col gap-2 mt-4 lg:overflow-hidden overflow-auto lg:hover:overflow-auto whitespace-nowrap">
         {links?.map((link) => (
           <Link
             href={link.href}
