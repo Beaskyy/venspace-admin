@@ -8,6 +8,12 @@ export const links = [
     icon2: "/home-2.svg",
   },
   {
+    name: "Users",
+    href: "/users",
+    icon: "/medal-star.svg",
+    icon2: "/medal-star-2.svg",
+  },
+  {
     name: "Listings",
     href: "/listings",
     icon: "/location.svg",
@@ -20,14 +26,32 @@ export const links = [
     icon2: "/bookings-2.svg",
   },
   {
-    name: "Earnings",
+    name: "Revenue",
     href: "/earnings",
     icon: "/earnings.svg",
     icon2: "/earnings-2.svg",
   },
   {
-    name: "Memberships",
-    href: "/Memberships",
+    name: "Support & Moderation",
+    href: "/support",
+    icon: "/bookings.svg",
+    icon2: "/bookings-2.svg",
+  },
+  {
+    name: "Marketing & Promotions",
+    href: "/promotions",
+    icon: "/bookings.svg",
+    icon2: "/bookings-2.svg",
+  },
+  {
+    name: "Security & Logs",
+    href: "/security",
+    icon: "/medal-star.svg",
+    icon2: "/medal-star-2.svg",
+  },
+  {
+    name: "Settings",
+    href: "/settings",
     icon: "/medal-star.svg",
     icon2: "/medal-star-2.svg",
   },
