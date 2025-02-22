@@ -27,7 +27,7 @@ export const links = [
   },
   {
     name: "Revenue",
-    href: "/earnings",
+    href: "/revenue",
     icon: "/earnings.svg",
     icon2: "/earnings-2.svg",
   },

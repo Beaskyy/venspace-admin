@@ -469,7 +469,7 @@ const SignUp = () => {
 
       <div className="hidden md:block h-full min-h-screen sticky top-0">
         <Image
-          src="/sign-up.png"
+          src="/homepage.svg"
           alt="Sign Up"
           fill
           className="absolute object-cover object-top"

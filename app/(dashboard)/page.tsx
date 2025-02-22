@@ -22,8 +22,8 @@ export default function Home() {
           columns={columns}
           data={riders}
           searchKey="name"
-          tableName={`Rider History`}
-          tableDescription="View recent riders added"
+          tableName={`Listings`}
+          tableDescription="View recent listings"
           onPageChange={(page: number) => setCurrentPage(page)}
           currentPage={currentPage}
         />
