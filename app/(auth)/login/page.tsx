@@ -26,21 +26,22 @@ const Login = () => {
 
   const formSchema = z.object({
     email: z.string().email({ message: "Please enter a valid email address." }),
-    password: z.string(),
-    // .min(8, { message: "Password must be at least 8 characters." })
-    // .regex(/[A-Z]/, {
-    //   message: "Password must contain at least one uppercase letter.",
-    // })
-    // .regex(/[a-z]/, {
-    //   message: "Password must contain at least one lowercase letter.",
-    // })
-    // .regex(/[0-9]/, {
-    //   message: "Password must contain at least one digit.",
-    // })
-    // .regex(/[@$!%*?&]/, {
-    //   message:
-    //     "Password must contain at least one special character (@, $, !, %, *, ?, &).",
-    // }),
+    password: z
+      .string()
+      .min(8, { message: "Password must be at least 8 characters." })
+      .regex(/[A-Z]/, {
+        message: "Password must contain at least one uppercase letter.",
+      })
+      .regex(/[a-z]/, {
+        message: "Password must contain at least one lowercase letter.",
+      })
+      .regex(/[0-9]/, {
+        message: "Password must contain at least one digit.",
+      })
+      .regex(/[@$!%*?&]/, {
+        message:
+          "Password must contain at least one special character (@, $, !, %, *, ?, &).",
+      }),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -55,40 +56,41 @@ const Login = () => {
 
   const onSubmit = async (values: FormValues) => {
     setDisabled(true);
-    try {
-      const options = {
-        method: "POST",
-        headers: new Headers({
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        }),
-        body: JSON.stringify({
-          email: values.email,
-          password: values.password,
-        }),
-      };
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/auth/login`,
-        options
-      );
-      const data = await response.json();
-      if (!response.ok) {
-        toast.error(data.message);
-        setDisabled(false);
-      } else {
-        Cookies.set("token", data.data.token.access_token, {
-          expires: 7,
-          secure: true,
-          sameSite: "Strict",
-        });
-        localStorage.setItem("user", JSON.stringify(data.data.user));
-        toast.success(data.message);
-        window.location.href = "/";
-      }
-    } catch (error: any) {
-      toast.error(error.message);
-      setDisabled(false);
-    }
+    // try {
+    //   const options = {
+    //     method: "POST",
+    //     headers: new Headers({
+    //       Accept: "application/json",
+    //       "Content-Type": "application/json",
+    //     }),
+    //     body: JSON.stringify({
+    //       email: values.email,
+    //       password: values.password,
+    //     }),
+    //   };
+    //   const response = await fetch(
+    //     `${process.env.NEXT_PUBLIC_API_URL}/auth/login`,
+    //     options
+    //   );
+    //   const data = await response.json();
+    //   if (!response.ok) {
+    //     toast.error(data.message);
+    //     setDisabled(false);
+    //   } else {
+    //     Cookies.set("token", data.data.token.access_token, {
+    //       expires: 7,
+    //       secure: true,
+    //       sameSite: "Strict",
+    //     });
+    //     localStorage.setItem("user", JSON.stringify(data.data.user));
+    //     toast.success(data.message);
+    //     window.location.href = "/";
+    //   }
+    // } catch (error: any) {
+    //   toast.error(error.message);
+    //   setDisabled(false);
+    // }
+    window.location.href = "/";
   };
 
   return (
@@ -166,26 +168,20 @@ const Login = () => {
                 <Button
                   type="submit"
                   disabled={disabled}
-                  className="w-full mt-8"
+                  className="w-full mt-8 rounded-lg"
                 >
                   Sign in
                 </Button>
               </form>
             </Form>
           </div>
-          <div className="flex gap-1 pb-8">
-            <p className="text-sm text-[#667085]">Already have an account?</p>
-            <Link className="text-sm text-[#F44363] leading-5" href="/signup">
-              Sign up
-            </Link>
-          </div>
         </div>
       </div>
 
       <div className="hidden md:block h-screen sticky top-0">
         <Image
-          src="/sign-up.png"
-          alt="Sign Up"
+          src="/homepage.svg"
+          alt="Sign in"
           fill
           className="absolute object-cover object-top"
         />
